@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Cruds Project</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- -------- main css file ------------- -->
+		<link rel="stylesheet" href="css/main.css" />
+		<!-- -------- main js file ------------- -->
+		<script src="js/main.js" defer></script>
+		<!-- -------- font awesome file ------------- -->
+		<link rel="stylesheet" href="fontawesome/css/all.css" />
+
+		<!-- -------- Google fonts [** CAIRO **] ------------- -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<div class="cruds">
+			<header>
+				<div class="container">
+					<h1>cruds</h1>
+					<p>create read update delete search</p>
+				</div>
+			</header>
+
+			<section>
+				<div class="container">
+					<div class="inps">
+						<div class="inpTitle">
+							<input
+								type="text"
+								value=""
+								name="title"
+								id="title"
+								placeholder="Title"
+							/>
+						</div>
+						<div class="holder">
+							<input
+								type="number"
+								name="price"
+								id="price"
+								placeholder="price"
+							/>
+							<input
+								type="number"
+								name="taxes"
+								id="taxes"
+								placeholder="taxes"
+							/>
+							<input type="number" name="ads" id="ads" placeholder="ads" />
+							<input
+								type="number"
+								name="discount"
+								id="discount"
+								placeholder="discount"
+							/>
+							<div class="total">Total : <span>00</span></div>
+						</div>
+						<div class="inpCount">
+							<input
+								type="number"
+								value=""
+								name="count"
+								id="count"
+								placeholder="count"
+							/>
+						</div>
+						<div class="inpCategory">
+							<input
+								type="text"
+								value=""
+								name="category"
+								id="category"
+								placeholder="category"
+							/>
+						</div>
+						<input type="submit" value="Create" id="create" />
+						<input type="submit" value="Update" id="mainUpdate" />
+            <hr>
+						<div class="inpSearch">
+							<input
+								type="text"
+								value=""
+								name="search"
+								id="search"
+								placeholder="search"
+							/>
+						</div>
+            <div class="search-info">
+              <input type="submit" value="search by brand" id="search-title">
+              <input type="submit" value="search by category" id="search-category">
+            </div>
+            <hr>
+            <input type="submit" value="delete all ()" id="delete">
+					</div>
+				</div>
+			</section>
+
+			<div class="results">
+				<div class="container">
+          <table>
+            <thead>
+              <tr>
+                <td>id</td>
+                <td>brand</td>
+                <td>price</td>
+                <td>taxes</td>
+                <td>ads</td>
+                <td>discount</td>
+                <td>total</td>
+                <td>category</td>
+                <td>update</td>
+                <td>delete</td>
+                <td>select</td>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+			</div>
+		</div>
+	</body>
+</html>

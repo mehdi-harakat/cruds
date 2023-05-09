@@ -1,0 +1,252 @@
+:root {
+	/* --main-color: #f34068;
+	--main-color-hover: #ff6a8b;
+	--bg-color: #006b7f;
+	--wh-color: #fefefe;
+	--para-color: #6fa9b7;
+	--correct-color: #1e8f6f;
+	--correct-color-hover: #2ab58e; */
+	--main-color: #e96479;
+	--main-color-hover: #ff8598;
+	--bg-color: #4d455d;
+	--bg-color-hover: #231f2a;
+	--wh-color: #f5e9cf;
+	--para-color: #7db9b6;
+	--correct-color: #1e8f6f;
+	--correct-color-hover: #2ab58e;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--wh-color);
+	font-family: "Cairo", sans-serif;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.cruds header .container h1 {
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: 3px;
+	font-size: 55px;
+	font-weight: 900;
+}
+
+.cruds header .container p {
+	text-align: center;
+	text-transform: capitalize;
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: 0.6px;
+	margin-top: -15px;
+	margin-bottom: 30px;
+}
+
+input {
+	border: none;
+	background-color: var(--wh-color);
+	color: var(--bg-color);
+	height: 40px;
+	margin-bottom: 10px;
+	padding: 0 10px;
+	text-transform: capitalize;
+	font-size: 16px;
+	font-weight: 600;
+	border-radius: 6px;
+	transition: all 0.3s;
+}
+
+input::placeholder {
+	color: #33333376;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+	transform: scale(1.02);
+	outline: 2px solid var(--main-color-hover);
+}
+
+.cruds section .container .inps {
+	display: flex;
+	flex-direction: column;
+}
+.cruds section .container .inps .inpTitle > input,
+.cruds section .container .inpCount > input,
+.cruds section .container .inpCategory > input,
+.cruds section .container .inpSearch > input {
+	width: 100%;
+}
+
+.cruds section .container .inps .holder {
+	display: flex;
+	gap: 20px;
+}
+
+/* ---------------------- this is to set the active class in js ------------------- */
+.cruds section .container .inps .holder .total {
+	background-color: var(--correct-color);
+	height: 40px;
+	border-radius: 6px;
+	padding: 0 20px;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	color: #333;
+	opacity: 0.3;
+	transition: 0.3s;
+	pointer-events: none;
+}
+
+.cruds section .container .inps .holder .total.active {
+	opacity: 1;
+	pointer-events: all;
+}
+/* --------------------------------------------------------------------------------------- */
+
+.cruds section .container .inps .holder .total span {
+	margin-left: 6px;
+	font-weight: 500;
+	color: var(--wh-color);
+}
+
+.cruds section .container .inps .holder > * {
+	width: calc(100% / 5);
+}
+
+.cruds section .container .inps hr {
+	margin-bottom: 15px;
+	border: none;
+	border-top: 2px dashed var(--para-color);
+}
+
+input[type="submit"] {
+	background-color: var(--main-color);
+	width: 40%;
+	font-size: 18px;
+	color: var(--wh-color);
+	cursor: pointer;
+	margin-bottom: 15px;
+	transition: 0.3s;
+}
+
+.cruds section .container #create,
+.cruds section .container #mainUpdate {
+	background-color: var(--correct-color);
+}
+
+.cruds section .container #mainUpdate:hover ,
+.cruds section .container #create:hover {
+	background-color: var(--correct-color-hover);
+}
+
+#mainUpdate {
+	display: none;
+}
+
+input[type="submit"]:hover {
+	background-color: var(--main-color-hover);
+}
+
+.cruds section .container .inps .search-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.cruds section .container .inps .search-info #search-title,
+.cruds section .container .inps .search-info #search-category {
+	width: 40%;
+}
+
+.cruds section .container #create,
+.cruds section .container #mainUpdate,
+.cruds section .container .inps #delete {
+	width: 100%;
+}
+
+/* ---------------------- this is to set the active class in js ------------------- */
+.cruds section .container .inps #delete {
+	opacity: 0.3;
+	transition: 0.3s;
+	pointer-events: none;
+}
+
+.cruds section .container .inps #delete.active {
+	opacity: 1;
+	pointer-events: all;
+}
+/* ----------------------------------------------------------------------- */
+
+.cruds .results .container table {
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border-spacing: 3px;
+}
+
+.cruds .results .container table td {
+	color: var(--bg-color);
+	text-transform: capitalize;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.cruds .results .container table thead td {
+	background-color: var(--wh-color);
+	font-size: 22px;
+	font-weight: 900;
+	padding: 6px;
+}
+
+.cruds .results .container table tbody td {
+	padding: 10px 15px;
+	background-color: var(--para-color);
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.cruds .results .container table tbody td span {
+	padding: 4px 15px;
+	font-size: 15px;
+	border-radius: 15px;
+	color: var(--wh-color);
+	cursor: pointer;
+	user-select: none;
+	transition: 0.3s;
+}
+
+.cruds .results .container table tbody td span.update {
+	background-color: var(--correct-color);
+}
+.cruds .results .container table tbody td span.update:hover {
+	background-color: var(--correct-color-hover);
+}
+
+.cruds .results .container table tbody td span.delete {
+	background-color: var(--main-color);
+}
+.cruds .results .container table tbody td span.delete:hover {
+	background-color: var(--main-color-hover);
+}
+
+
+.cruds .results .container table tbody td span.select {
+	background-color: var(--bg-color);
+}
+.cruds .results .container table tbody td span.select:hover {
+	background-color: var(--bg-color-hover);
+}
+.cruds .results .container table tbody td span.select.active {
+	background-color: var(--bg-color-hover);
+}
+
+
